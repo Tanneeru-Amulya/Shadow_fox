@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TANNEERU AMULYA — Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio with bio, skills, experience and contact." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7dd3fc;
+      --accent-2:#60a5fa;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#061226 0%, #071124 50%); color:#e6eef6}
+    a{color:var(--accent)}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263a}
+    nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a:hover{background:var(--glass);color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+    .intro h1{margin:0;font-size:2rem}
+    .intro p{color:var(--muted);line-height:1.5}
+    .cta{margin-top:16px;display:flex;gap:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#012b3a;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;text-decoration:none}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+    /* profile card */
+    .profile{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:18px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#082033,#0b2540);box-shadow:0 10px 30px rgba(12,20,30,0.6)}
+    .avatar svg{width:110px;height:110px;opacity:0.95}
+    .name{font-weight:700;font-size:1.2rem}
+    .role{color:var(--muted);font-weight:600}
+    .meta{display:flex;gap:8px;color:var(--muted);font-size:0.95rem}
+
+    /* sections */
+    main{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin-top:24px}
+    section{margin-bottom:16px}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .skill{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;font-weight:600}
+    .experience .job{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));margin-bottom:10px}
+    .job h4{margin:0 0 6px 0}
+    .job p{margin:0;color:var(--muted)}
+
+    /* contact */
+    .contact form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;outline:none}
+    input:focus,textarea:focus{border-color:rgba(125,211,252,0.9)}
+
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AT</div>
+        <div>
+          <div style="font-weight:700">TANNEERU AMULYA</div>
+          <div style="color:var(--muted);font-size:0.9rem">Frontend & Java | Problem Solver</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h1>Hi — I'm Amulya 👋</h1>
+        <p>I'm a developer focused on building accessible, performant web apps. I love solving algorithmic problems and turning designs into clean, reusable code.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Hire me</a>
+          <a class="btn secondary" href="#experience">My Work</a>
+        </div>
+
+        <div style="display:flex;gap:14px;margin-top:18px;flex-wrap:wrap">
+          <div class="card" style="padding:12px;border-radius:10px;display:flex;flex-direction:column;"> 
+            <strong>Location</strong>
+            <span style="color:var(--muted)">India</span>
+          </div>
+          <div class="card" style="padding:12px;border-radius:10px;display:flex;flex-direction:column;">
+            <strong>Availability</strong>
+            <span style="color:var(--muted)">Open to work</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">
+          <!-- simple svg avatar -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="url(#g)"/>
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#7dd3fc"/>
+                <stop offset="1" stop-color="#60a5fa"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(4,3)" fill="#012b3a">
+              <circle cx="8" cy="5" r="3.2"/>
+              <path d="M0 18c0-3.3 3.6-6 8-6s8 2.7 8 6v1H0v-1z"/>
+            </g>
+          </svg>
+        </div>
+        <div class="name">TANNEERU AMULYA</div>
+        <div class="role">Frontend Developer & Java Enthusiast</div>
+        <div class="meta">📧 amulyatanneru8@gmail.com • 💼 GitHub / LinkedIn</div>
+      </aside>
+    </section>
+
+    <main>
+      <div>
+        <section id="about" class="card">
+          <h3>About</h3>
+          <p style="color:var(--muted)">I'm a passionate developer with experience building responsive web apps using HTML, CSS, JavaScript and React. I enjoy competitive programming, learning new tools and contributing to open-source.</p>
+        </section>
+
+        <section id="skills" class="card">
+          <h3>Skills</h3>
+          <div class="skills" style="margin-top:12px">
+            <div class="skill">Web Development (HTML, CSS, JS)</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+          </div>
+        </section>
+
+        <section id="experience" class="card experience">
+          <h3>Experience</h3>
+          <div class="job">
+            <h4>Python Intern — YBI Foundation</h4>
+            <div style="color:var(--muted);font-size:0.9rem">Jan 2024 — Mar 2024</div>
+            <p style="margin-top:8px;color:var(--muted)">Completed an internship focused on Python programming, working on data analysis and small automation projects to improve practical coding skills.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section id="contact" class="card contact">
+          <h3>Contact</h3>
+          <p style="color:var(--muted)">Want to work together or ask about a project? Send a message — this form is non-functional by default but easy to hook up to Netlify/EmailJS/your backend.</p>
+          <form action="#" onsubmit="event.preventDefault(); alert('Form demo — integrate your backend to send messages.')">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <textarea rows="4" placeholder="Message" required></textarea>
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h4>Quick Links</h4>
+          <ul style="padding-left:18px;color:var(--muted)">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Resume (PDF)</a></li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div> TANNEERU AMULYA — Built with HTML & CSS</div>
+    </footer>
+  </div>
+</body>
+</html>
